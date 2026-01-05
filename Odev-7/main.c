@@ -34,8 +34,8 @@ int main(int argc, char *argv[]) {
 void silDeger(int dizi[], int deger)
 {
     int index = -1;
-
-    for (int sayac = 0; sayac < 5; sayac++)
+int sayac = 0;
+    for (sayac = 0; sayac < 5; sayac++)
     {
         if (dizi[sayac] == deger)
         {
@@ -43,15 +43,14 @@ void silDeger(int dizi[], int deger)
             break;
         }
     }
-
     if (index == -1)
     {
         printf("Deger bulunamadi.\n");
         return;
     }
-
-    for (int i = index; i < 5; i++)
+	int i;
+    for (i = index; i < 5; i++)
         dizi[i] = dizi[i + 1];
 
-    (*boyut)--;
+    boyut--;
 }
